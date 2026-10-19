@@ -1,0 +1,45 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.featured {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+
+    @include respond($bp-md) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.product {
+  background: $white;
+  border: 1px solid $line;
+  border-radius: 8px;
+  overflow: hidden;
+
+  &__swatch {
+    height: 10rem;
+  }
+
+  &__body {
+    padding: 1.25rem;
+  }
+
+  &__name {
+    font-size: 1.25rem;
+  }
+
+  &__price {
+    margin: 0;
+    font-weight: 700;
+    color: $amber;
+  }
+
+  @each $name, $color in $products {
+    &--#{$name} .product__swatch {
+      background: $color;
+    }
+  }
+}

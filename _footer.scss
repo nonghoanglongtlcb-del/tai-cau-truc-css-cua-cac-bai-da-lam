@@ -1,0 +1,47 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.footer {
+  background: $ink;
+  color: $mist;
+  padding: 3rem 0 1.5rem;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2rem;
+
+    @include respond($bp-md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__title {
+    font-size: 1.1rem;
+    color: $white;
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      color: $amber;
+    }
+  }
+
+  &__copy {
+    margin: 2rem 0 0;
+    padding-top: 1rem;
+    border-top: 1px solid rgba($white, 0.2);
+  }
+}

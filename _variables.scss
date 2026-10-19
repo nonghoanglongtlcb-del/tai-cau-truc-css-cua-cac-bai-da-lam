@@ -1,0 +1,23 @@
+// Màu sắc
+$ink: #17261d;
+$forest: #1f3d2b;
+$leaf: #6b8f4e;
+$mist: #eef3e8;
+$line: #d9e2cf;
+$amber: #c8862b;
+$white: #fff;
+
+// Font
+$font-heading: Georgia, "Times New Roman", serif;
+$font-body: "Segoe UI", Roboto, Arial, sans-serif;
+
+// Layout
+$container: 1100px;
+$bp-md: 768px;
+
+// Màu ảnh minh hoạ của từng sản phẩm (dùng với @each)
+$products: (
+  "xanh": #6b8f4e,
+  "vang": #c8862b,
+  "nau": #7a4e2d
+);

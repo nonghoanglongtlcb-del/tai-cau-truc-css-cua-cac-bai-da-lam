@@ -1,0 +1,33 @@
+@use "variables" as *;
+
+@mixin container {
+  width: min(100% - 2rem, $container);
+  margin-inline: auto;
+}
+
+@mixin flex($justify: flex-start, $align: center, $gap: 0) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
+
+@mixin respond($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
+
+@mixin button($bg, $fg) {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  border-radius: 4px;
+  background: $bg;
+  color: $fg;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.88;
+  }
+}

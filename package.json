@@ -1,0 +1,12 @@
+{
+  "name": "tra-tan-cuong-landing",
+  "version": "1.0.0",
+  "description": "Landing page Trà Tân Cương - tái cấu trúc CSS bằng SASS",
+  "scripts": {
+    "sass": "sass --watch scss/style.scss:css/style.css",
+    "build": "sass --no-source-map scss/style.scss:css/style.css"
+  },
+  "devDependencies": {
+    "sass": "^1.80.0"
+  }
+}

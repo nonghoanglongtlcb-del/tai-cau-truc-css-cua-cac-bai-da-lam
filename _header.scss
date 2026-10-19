@@ -1,0 +1,53 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.hero {
+  background: $forest;
+  color: $white;
+  padding: 5rem 0;
+
+  &__inner {
+    @include flex(space-between, center, 3rem);
+  }
+
+  &__text {
+    max-width: 34rem;
+  }
+
+  &__title {
+    font-size: 3rem;
+  }
+
+  &__desc {
+    margin-bottom: 2rem;
+    color: $mist;
+  }
+
+  &__btn {
+    @include button($amber, $ink);
+  }
+
+  &__art {
+    flex: 0 0 18rem;
+    height: 18rem;
+    border-radius: 50% 0 50% 0;
+    background: $leaf;
+  }
+
+  @include respond($bp-md) {
+    &__inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__title {
+      font-size: 2.2rem;
+    }
+
+    &__art {
+      flex-basis: auto;
+      width: 100%;
+      height: 10rem;
+    }
+  }
+}
